@@ -1,0 +1,17 @@
+﻿生成启动时间为 2019/1/21 16:55:40。
+     1>项目“D:\比特\BT数据结构\ZY2-1.17无头单项链表\ZY2-1.17无头单项链表\ZY2-1.17无头单项链表.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt SList.c
+         SList.c
+     1>d:\比特\bt数据结构\zy2-1.17无头单项链表\zy2-1.17无头单项链表\slist.c(327): warning C4047: “函数”:“Node *”与“int”的间接级别不同
+     1>d:\比特\bt数据结构\zy2-1.17无头单项链表\zy2-1.17无头单项链表\slist.c(327): warning C4024: “SListErase”: 形参和实参 2 的类型不同
+     1>d:\比特\bt数据结构\zy2-1.17无头单项链表\zy2-1.17无头单项链表\slist.c(29): warning C4715: “BuySListNode”: 不是所有的控件路径都返回值
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\比特\BT数据结构\ZY2-1.17无头单项链表\Debug\ZY2-1.17无头单项链表.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\比特\BT数据结构\ZY2-1.17无头单项链表\Debug\ZY2-1.17无头单项链表.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\比特\BT数据结构\ZY2-1.17无头单项链表\Debug\ZY2-1.17无头单项链表.lib" /MACHINE:X86 Debug\SList.obj
+         Debug\test.obj
+     1>LINK : fatal error LNK1104: 无法打开文件“D:\比特\BT数据结构\ZY2-1.17无头单项链表\Debug\ZY2-1.17无头单项链表.exe”
+     1>已完成生成项目“D:\比特\BT数据结构\ZY2-1.17无头单项链表\ZY2-1.17无头单项链表\ZY2-1.17无头单项链表.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.78
