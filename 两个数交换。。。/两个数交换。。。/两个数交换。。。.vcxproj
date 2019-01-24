@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{34719864-F32A-4370-9584-A52AE298016A}</ProjectGuid>
-    <RootNamespace>使用函数实现两个数的交换</RootNamespace>
+    <ProjectGuid>{B42574FB-1321-46DE-B4FD-580D8D5554EA}</ProjectGuid>
+    <RootNamespace>两个数交换。。。</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
