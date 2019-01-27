@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "练习", "练习\练习.vcxproj", "{852C4729-35B5-4162-8EFB-85289FD4A2E5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "判断是不是素数", "判断是不是素数\判断是不是素数.vcxproj", "{CA794A08-6D01-478A-B8F7-4215D7064132}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{852C4729-35B5-4162-8EFB-85289FD4A2E5}.Debug|Win32.ActiveCfg = Debug|Win32
-		{852C4729-35B5-4162-8EFB-85289FD4A2E5}.Debug|Win32.Build.0 = Debug|Win32
-		{852C4729-35B5-4162-8EFB-85289FD4A2E5}.Release|Win32.ActiveCfg = Release|Win32
-		{852C4729-35B5-4162-8EFB-85289FD4A2E5}.Release|Win32.Build.0 = Release|Win32
+		{CA794A08-6D01-478A-B8F7-4215D7064132}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CA794A08-6D01-478A-B8F7-4215D7064132}.Debug|Win32.Build.0 = Debug|Win32
+		{CA794A08-6D01-478A-B8F7-4215D7064132}.Release|Win32.ActiveCfg = Release|Win32
+		{CA794A08-6D01-478A-B8F7-4215D7064132}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
