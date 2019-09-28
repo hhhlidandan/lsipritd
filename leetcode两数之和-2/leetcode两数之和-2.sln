@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "leetcode两数之和-2", "leetcode两数之和-2\leetcode两数之和-2.vcxproj", "{140E0BF9-6884-4C4C-9C78-7FF51F3B1AA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{140E0BF9-6884-4C4C-9C78-7FF51F3B1AA7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{140E0BF9-6884-4C4C-9C78-7FF51F3B1AA7}.Debug|Win32.Build.0 = Debug|Win32
+		{140E0BF9-6884-4C4C-9C78-7FF51F3B1AA7}.Release|Win32.ActiveCfg = Release|Win32
+		{140E0BF9-6884-4C4C-9C78-7FF51F3B1AA7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
