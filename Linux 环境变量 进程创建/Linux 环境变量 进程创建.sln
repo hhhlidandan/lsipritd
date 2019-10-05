@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Linux 环境变量 进程创建", "Linux 环境变量 进程创建\Linux 环境变量 进程创建.vcxproj", "{FC8A7182-121B-41A7-921B-5E342A7D1E6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC8A7182-121B-41A7-921B-5E342A7D1E6A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FC8A7182-121B-41A7-921B-5E342A7D1E6A}.Debug|Win32.Build.0 = Debug|Win32
+		{FC8A7182-121B-41A7-921B-5E342A7D1E6A}.Release|Win32.ActiveCfg = Release|Win32
+		{FC8A7182-121B-41A7-921B-5E342A7D1E6A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
