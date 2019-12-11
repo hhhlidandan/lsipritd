@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1286,400">
+    <HorizontalLayout width="1333" height="479" bkimage="D:\证件照\018d4c597e9063a8012156037896f3.jpg@1280w_1l_2o_100sh.png">
+        <HorizontalLayout width="1283" height="53" bkcolor="#FF9257FF" />
+    </HorizontalLayout>
+</Window>
