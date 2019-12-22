@@ -106,8 +106,8 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 	//显示窗口，激活消息循环（放大 放小  最小化等等）
 	framWnd.ShowModal();//默认的消息循环自己处理的
 	return 0;
-}
-#endif;
+}；
+#endif
 
 
 
@@ -139,6 +139,10 @@ protected:
 			{
 				MessageBox(NULL, _T("最小化"), _T("test"), IDOK);
 			}
+			else if (strName == _T("btn_generate"))
+			{
+				GenerateGifWithPic();//用照片生成gif
+			}
 		}
 		else if (msg.sType==_T("itemselect"))
 		{
@@ -157,24 +161,46 @@ protected:
 		}
 	}
 
-
-
-
 	//发送消息
-	//void SendMessage(CDuiString strCMD)//把CMD的命令通过参数的方式传进来
-	//{
-	//	//发命令前先调控制台
-	//	SHELLEXECUTEINFO strSEInfo;
-	//	memset(&strSEInfo, 0, sizeof(SHELLEXECUTEINFO));//把结构体中所有字段置0，把关心的字段再设置
-	//	strSEInfo.cbSize = sizeof(SHELLEXECUTEINFO);	//设置size
-	//	strSEInfo.fMake//掩码
-	//	//命令行工具所在的位置	
-	//	strSEInfo.lpFile = _T("C:\Windows\System32");////命令行工具所在的位置
-	//	strSEInfo.lpParameters = strCMD;//CMD执行什么命令
-	//	//控制台窗口显示的方式
-	//	strSEInfo.nshow = SW_HIDE;//隐藏的方式     SW_HI显示出来
+	void SendMessage(CDuiString strCMD)//把CMD的命令通过参数的方式传进来
+	{
+		//发命令前先调控制台
+		SHELLEXECUTEINFO strSEInfo;//创建结构体
+		memset(&strSEInfo, 0, sizeof(SHELLEXECUTEINFO));//把结构体中所有字段置0，把关心的字段再设置
+		strSEInfo.cbSize = sizeof(SHELLEXECUTEINFO);	//设置size
+		strSEInfo.fMask = SEE_MASK_NOCLOSEPROCESS;//掩码
+		strSEInfo.lpFile = _T("C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools");////命令行工具所在的位置
+		strSEInfo.lpParameters = strCMD;//CMD执行什么命令
+		//控制台窗口显示的方式
+		strSEInfo.nShow = SW_SHOW;//隐藏的方式     SW_HI显示出来     SW_HIDE隐藏的方式
 
-	//}
+		//给命令行发送消息
+		ShellExecuteEx(&strSEInfo);//调用命令行窗口，执行用户的命令，在该函数中会创建一个进程来负责调用命令行窗口，来执行命令（给控制台发命令，ShellExecuteEx(&str)执行，传结构体，把命令窗口打开）
+		//ShellExecuteEx执行cmd命令时，命令行参数要假如/c来让命令行执行完后关闭，否则命令行进程会一直存在，WaitForSingleObject会一直等待
+
+		//等待命令响应完成，然后显示框
+		WaitForSingleObject(strSEInfo.hProcess, INFINITE);
+		MessageBox(NULL, _T("命令操作完成"), _T("DuilibTest"),IDOK);//命令执行完弹框
+	}
+	void GenerateGifWithPic()
+	{
+		CDuiString strPath = CPaintManagerUI::GetInstancePath();//获取工程目录
+		strPath += _T("ffmpeg\\");//给全路径
+		//1.构造命令   //考虑路径
+
+		//CDuiString strCMD(_T("ffmpeg\\ffmpeg -r 3 -i .\\Picture\\%d.jpg output.gif -y"));//  \\两个，
+		CDuiString strCMD;//定义字符串
+		strCMD += _T("/c ");//通过-c解析后面的命令
+		strCMD += strPath;//路径
+		strCMD += _T("ffmpeg -r 3 -i ");//再加字符串  注意该工具所在的路径必须填充完整
+		strCMD += strPath;//图片所在的路径
+		strCMD += _T(".\\Picture\\%d.jpg ");
+		strCMD += strPath;//生成动态图的路径
+		strCMD += _T("output.gif -y");//-y 如果存在该图片，覆盖掉该图片
+
+		//2.发送命令
+		SendMessage(strCMD);
+	}
 
 
 	//动态图的生成方式：图片或视频
@@ -186,20 +212,20 @@ protected:
 	//	Gen
 	//}
 
-	void LoadSRT()
-	{
-		//将srt格式的字幕文件，加载到界面中的list控件
-		CDuiString strPath = CpaintManagerUI::GetInstance;
-		strPath += _T("ffmpage\\input.srt");
-		std::ifstream fIn(strPath.GetData());
+	//void LoadSRT()
+	//{
+	//	//将srt格式的字幕文件，加载到界面中的list控件
+	//	CDuiString strPath = CpaintManagerUI::GetInstance;
+	//	strPath += _T("ffmpage\\input.srt");
+	//	std::ifstream fIn(strPath.GetData());
 
-	}
+	//}
 
-	CDuiString UTF8ToUnicode(const char* str)
-	{
-		//第一次调用：获取转化之后的目标传的长度
-		//第二次调用：真正的转化
-	}
+	//CDuiString UTF8ToUnicode(const char* str)
+	//{
+	//	//第一次调用：获取转化之后的目标传的长度
+	//	//第二次调用：真正的转化
+	//}
 };
 
 int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow)
