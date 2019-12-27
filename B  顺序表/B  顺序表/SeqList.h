@@ -33,9 +33,11 @@ typedef struct SeqList
 void SeqListInit(PSeqList ps);
 void SeqListDestory(PSeqList ps);
 
+void CheckIsCapacity(PSeqList ps);//检测是否需要扩容
+
 void SeqListPushBack(PSeqList ps, DataType data);//尾插
 void SeqListPopBack(PSeqList ps);//尾删
-void CheckIsCapacity(PSeqList ps);//检测是否需要扩容
+
 void SeqListPushFront(PSeqList ps, DataType data);//头插
 void SeqListPopFront(PSeqList ps);//头删
 
@@ -45,5 +47,19 @@ void SeqListErase(PSeqList ps, int pos);//任意位置删除
  
 int SeqListFind(PSeqList ps, DataType data);// 检测data是否在顺序表中
 
+void SeqListRemove(PSeqList ps, DataType data);// 移除顺序表中第一个值为data的元素 
+
+void SeqListRemoveAll(PSeqList ps, DataType data);// 移除顺序表中所有值为data的元素 
+
+
+void SeqListSize(PSeqList ps);//// 获取顺序表有效元素个数 
+void SeqListCapacity(PSeqList ps);// 获取顺序表的容量 
+
+ 
+int SeqListEmpty(PSeqList ps);// 检测顺序表是否为空
+
+
+DataType SeqListFront(PSeqList ps);// 获取顺序表中第一个元素 
+DataType SeqListBack(PSeqList ps);// 获取顺序表中最后一个元素
 /////////////////////////////////////////////////////////////
 void PrintSeqList(PSeqList ps);
