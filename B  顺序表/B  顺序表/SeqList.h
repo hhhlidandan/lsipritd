@@ -4,6 +4,7 @@
 #include<assert.h>
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 //SeqList   连续的空间中（也就是数组）
 
 
@@ -29,9 +30,8 @@ typedef struct SeqList
 }SeqList,*PSeqList;//定义了结构体变量（把struct SeqList重命名为SeqList）
 
 
-//初始化顺序表
-void SeqListInit(PSeqList ps);
-void SeqListDestory(PSeqList ps);
+void SeqListInit(PSeqList ps);//初始化顺序表
+void SeqListDestory(PSeqList ps);//对顺序表销毁
 
 void CheckIsCapacity(PSeqList ps);//检测是否需要扩容
 
@@ -43,23 +43,18 @@ void SeqListPopFront(PSeqList ps);//头删
 
 void SeqListInsert(PSeqList ps, int pos, DataType data);//任意位置插入  在[0,size)之间
 void SeqListErase(PSeqList ps, int pos);//任意位置删除
-
  
 int SeqListFind(PSeqList ps, DataType data);// 检测data是否在顺序表中
 
 void SeqListRemove(PSeqList ps, DataType data);// 移除顺序表中第一个值为data的元素 
-
 void SeqListRemoveAll(PSeqList ps, DataType data);// 移除顺序表中所有值为data的元素 
-
 
 void SeqListSize(PSeqList ps);//// 获取顺序表有效元素个数 
 void SeqListCapacity(PSeqList ps);// 获取顺序表的容量 
 
- 
 int SeqListEmpty(PSeqList ps);// 检测顺序表是否为空
-
 
 DataType SeqListFront(PSeqList ps);// 获取顺序表中第一个元素 
 DataType SeqListBack(PSeqList ps);// 获取顺序表中最后一个元素
 /////////////////////////////////////////////////////////////
-void PrintSeqList(PSeqList ps);
+void PrintSeqList(PSeqList ps);//打印

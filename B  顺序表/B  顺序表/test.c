@@ -46,7 +46,6 @@ int main()
 	PrintSeqList(&s);
 	// 获取顺序表的容量 
 	SeqListCapacity(&s);
-	PrintSeqList(&s);
 
 	SeqListEmpty(&s);//检测顺序表是否为空
 	SeqListFront(&s);// 获取顺序表中第一个元素 
