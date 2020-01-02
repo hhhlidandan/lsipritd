@@ -24,7 +24,7 @@ public:
 		}
 		if (l2 == NULL)
 		{
-			return l2;
+			return l1;
 		}
 		ListNode* NewNode = NULL;//新结点
 		ListNode* BeforeNode = NULL;//前一个结点
