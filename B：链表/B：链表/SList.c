@@ -139,6 +139,148 @@ void SListErase(PSList pl, Node* pos)//任意位置删除
 	free(pos);
 	printf("删除成功:");
 }
+
+void SListIsFindData(PSList pl, SDataType data)//检测data是否是链表中
+{
+	assert(pl);
+	Node* pCur = pl->_pHead;
+	if (pl->_pHead == NULL)
+	{
+		printf("链表为空，无法检测");
+		return;
+	}
+	while (pCur)
+	{
+		if (pCur->_data == data)
+		{
+			printf("%d在链表中", data);
+			return;
+		}
+		pCur = pCur->_pNext;
+	}
+	printf("%d不在链表中",data);
+	return;
+}
+void SListRemove(PSList pl, SDataType data)// 移除链表中第一个值为data的元素
+{
+	assert(pl);
+	if (pl->_pHead == NULL)
+	{
+		printf("链表为空，无法移除元素\n");
+		return;
+	}
+	Node* pCur = pl->_pHead;
+	Node* pPre = NULL;//pCur前一个结点
+	while (pCur->_pNext!=NULL)
+	{
+		while (pCur->_data != data)
+		{
+			if (pCur->_pNext == NULL)
+			{
+				printf("很遗憾，没有找到：");
+				return;
+			}
+			pPre = pCur;
+			pCur = pCur->_pNext;
+		}
+		if (pCur->_data==data)
+		{
+			if (pPre == NULL)
+			{
+				pl->_pHead = pCur->_pNext;
+			}
+			else
+			{
+				pPre->_pNext = pCur->_pNext;
+			}
+			free(pCur);
+			pCur = NULL;
+			printf("移除成功:   ");
+			return;
+		}
+	}
+	
+	
+}
+//void SListRemoveAll(PSList pl, SDataType data)// 移除链表中所有值为data的元素
+//{
+//	assert(pl);
+//	if (pl->_pHead == NULL)
+//	{
+//		printf("链表为空，无法移除元素\n");
+//		return;
+//	}
+//	Node* pCur = pl->_pHead;
+//	Node* pPre = NULL;//pCur的前一个结点
+//	
+//	while (pCur->_pNext!=NULL)
+//	{
+//		if (pCur->_data != data)
+//		{
+//			pPre = pCur;
+//			pCur = pCur->_pNext;
+//		}
+//		else
+//		{
+//			if (pPre == NULL)
+//			{
+//				pl->_pHead = pCur->_pNext;
+//			}
+//			else
+//			{
+//				pPre->_pNext = pCur->_pNext;
+//			}	
+//			free(pCur);
+//			pCur = NULL;
+//			
+//		}
+//	}
+//}
+void SListSize(PSList pl)//// 获取链表有效元素个数 
+{
+	assert(pl);
+	int count = 1;
+	Node* pCur = pl->_pHead;
+	while (pCur->_pNext)
+	{
+		if (pCur->_pNext)
+		{
+			pCur = pCur->_pNext;
+		}
+		count++;
+	}
+	printf("有效元素个数为:%d  :", count);
+	return;
+}
+int SListEmpty(PSList pl)// 检测链表是否为空
+{
+	assert(pl);
+	if (pl->_pHead)
+	{
+		printf("链表不为空：");
+		return 0;
+	}
+	printf("链表为空：");
+	return 0;
+}
+
+SDataType SListFront(PSList pl)// 获取链表中第一个元素 
+{
+	assert(pl);
+	printf("链表中第一个元素为：%d:  ", pl->_pHead->_data);
+	return pl->_pHead->_data;
+}
+SDataType SListBack(PSList pl)// 获取链表中最后一个元素
+{
+	assert(pl);
+	Node* pCur = pl->_pHead;
+	while (pCur->_pNext)
+	{
+		pCur = pCur->_pNext;
+	}
+	printf("链表中最后一个元素为:%d:   ", pCur->_data);
+	return pCur->_data;
+}
 void SListDestory(PSList pl)//销毁
 {
 	
@@ -156,6 +298,8 @@ void SListDestory(PSList pl)//销毁
 	pl->_pHead = NULL;
 	printf("销毁成功:");
 }
+
+
 //////////////////////////////////////
 void PrintSList(PSList pl)
 {
@@ -168,43 +312,4 @@ void PrintSList(PSList pl)
 		pCur = pCur->_pNext;
 	}
 	printf("NULL\n");
-}
-
-void SListTest1()
-{
-	SList s;
-	SListInit(&s);
-	SListPushBack(&s, 1);//尾插
-	SListPushBack(&s, 2);
-	SListPushBack(&s, 3);
-	SListPushBack(&s, 4);
-	SListPushBack(&s, 5);
-	SListPushBack(&s, 6);
-	PrintSList(&s);
-
-	SListPopBack(&s);//尾删
-	PrintSList(&s);
-
-	SListPushFront(&s, 0);//头插
-	PrintSList(&s);
-
-	SListPopFront(&s);//头删
-	PrintSList(&s);
-
-	//任意位置插入
-	Node* ret=SListFind(&s, 2);//找位置
-	SListInsert(&s, ret, 8);
-	PrintSList(&s);
-
-	//任意位置删除
-	ret = SListFind(&s, 2);
-	SListErase(&s, ret);
-	PrintSList(&s);
-
-	SListDestory(&s);
-	PrintSList(&s);
-}
-void SListTest()
-{
-	SListTest1();
 }

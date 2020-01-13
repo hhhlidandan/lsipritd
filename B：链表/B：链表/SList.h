@@ -40,6 +40,18 @@ Node* SListFind(PSList pl, SDataType data);//找位置
 void SListInsert(PSList pl, Node* pos, SDataType data);//任意位置插入
 void SListErase(PSList pl, Node* pos);//任意位置删除
 
+
+void SListIsFindData(PSList pl, SDataType data);//检测data是否在链表中
+void SListRemove(PSList pl, SDataType data);// 移除链表中第一个值为data的元素 
+void SListRemoveAll(PSList pl, SDataType data);// 移除链表中所有值为data的元素 
+void SListSize(PSList pl);//// 获取链表有效元素个数 
+void SListCapacity(PSList pl);// 获取链表的容量 
+
+int SListEmpty(PSList pl);// 检测链表是否为空
+
+SDataType SListFront(PSList pl);// 获取链表中第一个元素 
+SDataType SListBack(PSList pl);// 获取链表中最后一个元素
+///////////////////////////////////////////////////////
 void PrintSList(PSList pl);
 //////////////////////////////////
 void SListTest();
