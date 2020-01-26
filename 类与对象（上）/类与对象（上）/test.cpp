@@ -7,13 +7,16 @@
 	}
 	void Stu::PrintStudent()
 	{
-		cout << _name << " " << _age << " " << _gender << " " << endl;
+		cout << sizeof(Stu) << endl;
 	}
 int main()
 {
-	Stu s;
-	s.InitStudent("张三", 15, "男");
-	s.PrintStudent();
+	Stu s1;
+	s1.InitStudent("张三", 15, "男");
+	s1.PrintStudent();
+	Stu s2;
+	s2.InitStudent("李四", 16, "男");
+	s2.PrintStudent();
 	//printf("%s %d %s\n", s._name,s._age,s._gender);
 
 	system("pause");

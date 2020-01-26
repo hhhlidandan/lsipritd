@@ -12,7 +12,6 @@ class Stu
 public:
 	void InitStudent(char* name, int age, char* gender);
 	void PrintStudent();
-public:
 	char _name[20];
 	int _age;
 	char _gender[10];
