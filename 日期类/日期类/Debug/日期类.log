@@ -1,4 +1,4 @@
-﻿生成启动时间为 2020/1/27 19:47:10。
+﻿生成启动时间为 2020/1/29 21:20:45。
      1>项目“F:\C++题\日期类\日期类\日期类.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Date.cpp
@@ -10,4 +10,4 @@
 
 生成成功。
 
-已用时间 00:00:06.82
+已用时间 00:00:14.02
