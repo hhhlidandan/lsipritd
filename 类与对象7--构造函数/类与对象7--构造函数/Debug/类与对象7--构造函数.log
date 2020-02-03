@@ -1,0 +1,13 @@
+﻿生成启动时间为 2020/2/3 16:51:18。
+     1>项目“F:\C++题\类与对象7--构造函数\类与对象7--构造函数\类与对象7--构造函数.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+     1>f:\c++题\类与对象7--构造函数\类与对象7--构造函数\test.cpp(142): error C2679: 二进制“=”: 没有找到接受“int”类型的右操作数的运算符(或没有可接受的转换)
+                 f:\c++题\类与对象7--构造函数\类与对象7--构造函数\test.cpp(137): 可能是“Date &Date::operator =(const Date &)”
+                 尝试匹配参数列表“(Date, int)”时
+     1>已完成生成项目“F:\C++题\类与对象7--构造函数\类与对象7--构造函数\类与对象7--构造函数.vcxproj”(Rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:03.88
