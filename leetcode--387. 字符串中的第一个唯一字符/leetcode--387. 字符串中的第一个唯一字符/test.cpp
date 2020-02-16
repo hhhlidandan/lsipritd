@@ -38,3 +38,37 @@ int main()
 	system("pause");
 	return 0;
 }
+
+//给定一个字符串，找到它的第一个不重复的字符，输出该字符
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+int main()
+{
+	string s;
+	while (cin >> s)
+	{
+		//统计字符出现的次数
+		int count[256] = { 0 };
+		int i;
+		for (i = 0; i<s.size(); i++)
+		{
+			count[s[i]]++;
+		}
+		//找出现一次的
+		for (i = 0; i<s.size(); i++)
+		{
+			if (count[s[i]] == 1)
+			{
+				cout << s[i] << endl;
+				break;
+			}
+		}
+		if (i == s.size())
+		{
+			cout << "-1" << endl;
+		}
+	}
+	return 0;
+}
