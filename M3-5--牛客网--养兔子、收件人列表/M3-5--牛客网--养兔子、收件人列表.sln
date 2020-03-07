@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "M3-5--牛客网--养兔子、收件人列表", "M3-5--牛客网--养兔子、收件人列表\M3-5--牛客网--养兔子、收件人列表.vcxproj", "{B05929C4-4657-49E3-876B-976A2FB57363}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B05929C4-4657-49E3-876B-976A2FB57363}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B05929C4-4657-49E3-876B-976A2FB57363}.Debug|Win32.Build.0 = Debug|Win32
+		{B05929C4-4657-49E3-876B-976A2FB57363}.Release|Win32.ActiveCfg = Release|Win32
+		{B05929C4-4657-49E3-876B-976A2FB57363}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
