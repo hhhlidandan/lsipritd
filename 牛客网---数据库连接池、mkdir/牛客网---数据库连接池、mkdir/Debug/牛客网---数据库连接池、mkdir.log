@@ -1,0 +1,15 @@
+﻿生成启动时间为 2020/3/10 13:21:10。
+     1>项目“F:\比特\C++力扣，牛客网\牛客网---数据库连接池、mkdir\牛客网---数据库连接池、mkdir\牛客网---数据库连接池、mkdir.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+     1>f:\比特\c++力扣，牛客网\牛客网---数据库连接池、mkdir\牛客网---数据库连接池、mkdir\test.cpp(12): warning C4018: “<”: 有符号/无符号不匹配
+     1>f:\比特\c++力扣，牛客网\牛客网---数据库连接池、mkdir\牛客网---数据库连接池、mkdir\test.cpp(24): warning C4018: “>”: 有符号/无符号不匹配
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\比特\C++力扣，牛客网\牛客网---数据库连接池、mkdir\Debug\牛客网---数据库连接池、mkdir.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\比特\C++力扣，牛客网\牛客网---数据库连接池、mkdir\Debug\牛客网---数据库连接池、mkdir.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\比特\C++力扣，牛客网\牛客网---数据库连接池、mkdir\Debug\牛客网---数据库连接池、mkdir.lib" /MACHINE:X86 Debug\test.obj
+         牛客网---数据库连接池、mkdir.vcxproj -> F:\比特\C++力扣，牛客网\牛客网---数据库连接池、mkdir\Debug\牛客网---数据库连接池、mkdir.exe
+     1>已完成生成项目“F:\比特\C++力扣，牛客网\牛客网---数据库连接池、mkdir\牛客网---数据库连接池、mkdir\牛客网---数据库连接池、mkdir.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:18.93
