@@ -1,9 +1,8 @@
-﻿生成启动时间为 2020/3/26 22:47:34。
+﻿生成启动时间为 2020/3/27 21:35:38。
      1>项目“F:\比特\C++题\数据结构--堆的操作\数据结构--堆的操作\数据结构--堆的操作.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt Heap.c
          Heap.c
-     1>f:\比特\c++题\数据结构--堆的操作\数据结构--堆的操作\heap.c(9): warning C4029: 声明的形参表不同于定义
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
          test.cpp
        Link:
@@ -14,4 +13,4 @@
 
 生成成功。
 
-已用时间 00:00:13.26
+已用时间 00:00:12.42

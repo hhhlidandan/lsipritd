@@ -5,6 +5,44 @@ void Swap(int* left, int* right)
 	*left = *right;
 	*right = tmp;
 }
+void CheckCapacity(Heap* hp)
+{
+	assert(hp);
+	int newCapacity = hp->capacity * 2;
+	if (hp->size >= hp->capacity)
+	{
+		//需要扩容
+		DataType* temp = (DataType*)malloc(sizeof(DataType)*newCapacity);
+		if (temp == NULL)
+		{
+			assert(0);
+			return;
+		}
+		//memcpy(temp, hp->array, sizeof(DataType)*hp->size);
+		for (int i = 0; i < hp->size; i++)
+			temp[i] = hp->array[i];
+		free(hp->array);
+		hp->array = temp;
+		hp->capacity = newCapacity;
+	}
+}
+void HeapAdjustUp(Heap* hp, int child)
+{
+	int parent = (child - 1) >> 1;
+	//不需要找孩子中最小的与双亲比较
+	//插入之前已经满足堆的特性了
+	while (child)
+	{
+		if (hp->array[child] < hp->array[parent])
+		{
+			Swap(&hp->array[child], &hp->array[parent]);
+			child = parent;
+			parent = (child - 1) >> 1;
+		}
+		else
+			return;
+	}
+}
 void HeapAdjustDown(Heap* hp,int parent)
 {
 	int child = parent * 2 + 1;
@@ -37,9 +75,7 @@ void HeapCreate(Heap* hp, DataType arr[], int size)//创建
 	//对堆中元素进行向下调整,重复调几次
 	//调上面的左右子树之前，要从倒数第一个非叶子结点开始
 	for (int root = (size - 2) >> 1; root >= 0;root--)
-	{
 		HeapAdjustDown(hp, root);
-	}
 }
 void HeapDestory(Heap* hp)//销毁
 {
@@ -52,10 +88,21 @@ void HeapDestory(Heap* hp)//销毁
 		hp->size = 0;
 	}
 }
-void HeapPush(Heap* hp, DataType data);//插入
+void HeapPush(Heap* hp, DataType data)//插入
+{
+	assert(hp);
+	CheckCapacity(hp);
+	hp->array[hp->size] = data;
+	hp->size++;
+	HeapAdjustUp(hp,hp->size-1);
+}
 void HeapPop(Heap* hp)//堆的删除
 {
-
+	assert(hp);
+	if (HeapEmpty(hp)) return;
+	Swap(&hp->array[0], &hp->array[hp->size - 1]);
+	hp->size--;
+	HeapAdjustDown(hp, 0);
 }
 DataType HeapTop(Heap* hp)//取堆顶元素
 {
@@ -72,4 +119,34 @@ int HeapEmpty(Heap* hp)//堆判空
 	assert(hp);
 	return hp->size == 0;
 }
-void HeapSort(int *a, int n);//堆排序
+/////////////////////////////////////////////////
+void Adjust(int a[],int size,int parent)
+{
+	int child = parent * 2 + 1;
+	while (child<size)
+	{
+		if (a[child] > a[child + 1] && child + 1<size)
+			child = child + 1;
+		if (a[child] < a[parent])
+		{
+			Swap(&a[child], &a[parent]);
+			parent = child;
+			child = parent * 2 + 1;
+		}
+		else return;
+	}
+}
+void HeapSort(int *a,int size)//堆排序
+{
+	for (int root = (size - 2) >> 1; root >= 0; root--)//加入建的是小堆
+		Adjust(a, size,root);
+	int end = size - 1;
+	while (end)
+	{
+		int temp = a[0];
+		a[0] = a[end];
+		a[end] = temp;
+		Adjust(a, end, 0);
+		end--;
+	}	
+}
