@@ -3,9 +3,9 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<malloc.h>
+#include<queue>
 
 typedef int BTDataType;
-
 typedef struct BinTreeNode
 {
 	struct BinTreeNode* left;
@@ -44,8 +44,28 @@ void endOrder(BTNode* root)
 	}
 }
 
-BTNode* BTCreatetree(BTDataType* Node, int n, int* p);
-void BTdestory(BTNode* root);
+//层序遍历
+//void evelOrder(BTNode* root)
+//{
+//	if (root == NULL) return;
+//	Queue q;
+//	init(&q);
+//	push(&q, root);
+//
+//	while (!queueEmpty(&q))
+//	{
+//		BTNode* pCur = queueFront(&q);
+//		queuepop(&p);
+//
+//		printf("%d ", pCur->val);
+//		if (pCur->right)
+//			queuepush(&q, pCur->left);
+//		if (pCur->right)
+//			queuepush(&q, pCur->right);
+//	}
+//}
+BTNode* BTCreatetree();
+//void BTdestory(BTNode* root);
 int BTSize(BTNode* root);//二叉树节点的个数
 int BTleafSize(BTNode* root);//二叉树叶子节点的个数
 int BTcoutKsize(BTNode* root, int k);//二叉树第K层节点的个数
@@ -53,3 +73,4 @@ BTNode* FindX(BTNode* root,BTDataType x);//查找值尾X的节点
 
 int BTHigh(BTNode* root);//获取二叉树的高度
 BTNode* GetParent(BTNode* root, BTNode* Node);//获取Node的双亲
+
