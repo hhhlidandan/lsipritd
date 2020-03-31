@@ -1,7 +1,8 @@
 #include "BinaryTree.c"
 int main()
 {
-	BTNode* root = BTCreatetree();
+	int array[] = { 1, 2, 3, -1, -1, -1, 4, 5, -1, -1, 6 };
+	BTNode* root = BTCreatetree(array, sizeof(array)/sizeof(array[0]), -1);
 	printf("Ç°Ðò£º");
 	beforeOrder(root);
 	printf("\n");

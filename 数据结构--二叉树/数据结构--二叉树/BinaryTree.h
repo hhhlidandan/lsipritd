@@ -3,7 +3,6 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<malloc.h>
-#include<queue>
 
 typedef int BTDataType;
 typedef struct BinTreeNode
@@ -43,7 +42,6 @@ void endOrder(BTNode* root)
 		printf("%d ", root->val);
 	}
 }
-
 //层序遍历
 //void evelOrder(BTNode* root)
 //{
@@ -64,13 +62,11 @@ void endOrder(BTNode* root)
 //			queuepush(&q, pCur->right);
 //	}
 //}
-BTNode* BTCreatetree();
 //void BTdestory(BTNode* root);
+BTNode* BTCreatetree();
 int BTSize(BTNode* root);//二叉树节点的个数
 int BTleafSize(BTNode* root);//二叉树叶子节点的个数
 int BTcoutKsize(BTNode* root, int k);//二叉树第K层节点的个数
 BTNode* FindX(BTNode* root,BTDataType x);//查找值尾X的节点
-
 int BTHigh(BTNode* root);//获取二叉树的高度
 BTNode* GetParent(BTNode* root, BTNode* Node);//获取Node的双亲
-

@@ -1,4 +1,22 @@
 #include "BinaryTree.h"
+//在递归进行中，index需要一直++，因此在递归中，不能传值，应该传地址，在index修改之后，可以获取修改后的值
+BTNode* _BTCreatetree(int *array, int size, int* index, int invalid)//invalid代表无效值,index传地址
+{
+	BTNode* root = NULL;
+	if (array[*index] != invalid&&index<size)
+	{
+		root = BuyBinTreeNode(array[*index]);//创建根节点
+		//递归创建根结点的左右子树
+		root->left = _BTCreatetree(array, size, ++(*index), invalid);
+		root->right = _BTCreatetree(array, size, ++(*index), invalid);
+	}
+	return root;
+}
+BTNode* BTCreatetree(int *array,int size,BTDataType invalid)
+{
+	int index = 0;//不能直接把函数中index设为0，编译时可能以为是空，所以先定义下
+	return _BTCreatetree(array, size, &index, invalid);
+}
 BTNode* BuyBinTreeNode(BTDataType val)
 {
 	BTNode* pNewNode = (BTNode*)malloc(sizeof(BTNode));
@@ -7,31 +25,31 @@ BTNode* BuyBinTreeNode(BTDataType val)
 		assert(0);
 		return NULL;
 	}
-	pNewNode->left =NULL;
-	pNewNode->right =NULL;
-	pNewNode->val =val;
+	pNewNode->left = NULL;
+	pNewNode->right = NULL;
+	pNewNode->val = val;
 	return pNewNode;
 }
-BTNode* BTCreatetree()//验证方法是否正确
-{
-	BTNode* node1 = BuyBinTreeNode(1);
-	BTNode* node2 = BuyBinTreeNode(2);
-	BTNode* node3 = BuyBinTreeNode(3);
-	BTNode* node4 = BuyBinTreeNode(4);
-	BTNode* node5 = BuyBinTreeNode(5);
-	BTNode* node6 = BuyBinTreeNode(6);
-
-	BTNode* root = node1;
-	node1->left = node2;
-	node1->right = node4;
-	node2->left = node3;
-	//node2->right = NULL;
-	node4->left = node5;
-	node4->right = node6;
-	//node5->left = NULL;
-	//node5->right = NULL;
-	return root;
-}
+//BTNode* BTCreatetree()//验证方法是否正确
+//{
+//	BTNode* node1 = BuyBinTreeNode(1);
+//	BTNode* node2 = BuyBinTreeNode(2);
+//	BTNode* node3 = BuyBinTreeNode(3);
+//	BTNode* node4 = BuyBinTreeNode(4);
+//	BTNode* node5 = BuyBinTreeNode(5);
+//	BTNode* node6 = BuyBinTreeNode(6);
+//
+//	BTNode* root = node1;
+//	node1->left = node2;
+//	node1->right = node4;
+//	node2->left = node3;
+//	//node2->right = NULL;
+//	node4->left = node5;
+//	node4->right = node6;
+//	//node5->left = NULL;
+//	//node5->right = NULL;
+//	return root;
+//}
 
 //void BTdestory(BTNode* root);
 int BTSize(BTNode* root)//二叉树节点的个数
