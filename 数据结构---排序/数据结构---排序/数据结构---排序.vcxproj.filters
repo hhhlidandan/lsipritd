@@ -24,5 +24,11 @@
     <ClCompile Include="选择排序--直接选择排序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="交换排序--冒泡排序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="选择排序--堆排序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

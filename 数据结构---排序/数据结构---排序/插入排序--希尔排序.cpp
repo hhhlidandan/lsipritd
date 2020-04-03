@@ -3,21 +3,21 @@
 //#pragma warning(disable:4996)
 //void shellsort(int *a, int n)
 //{
-//	int gap = 3;
-//	while (gap > 0)
+//	int gap = n;
+//	while (gap > 1)
 //	{
-//		for (int i = 0; i < n; i+=gap)
+//		gap = gap / 3 + 1;
+//		for (int i = 0; i < n; i++)//不需要改成i+gap
 //		{
 //			int end = i;
 //			int key = a[i + gap];
-//			while (key < a[end] && end + gap < n && end>=0)
+//			while (key < a[end] && end>=0&& i+gap < n)
 //			{
 //				a[end + gap] = a[end];
 //				end-=gap;
 //			}
 //			a[end+gap] = key;
 //		}
-//		gap--;
 //	}	
 //}
 //int main()
