@@ -1,14 +1,14 @@
-#include<stdio.h>
-#include<stdlib.h>
-#pragma warning(disable:4996)
+//#include<stdio.h>
+//#include<stdlib.h>
+//#pragma warning(disable:4996)
 //vim 文本编辑工具  g++/gcc编译  调试 ：打印日志+gdb
 //VS:集成开发工具---剪辑器+预处理器+编译器+连接器
-void Swap(int *number, int *a)
-{
-	int tmp = *number;
-	*number = *a;
-	*a = tmp;
-}
+//void Swap(int *number, int *a)
+//{
+//	int tmp = *number;
+//	*number = *a;
+//	*a = tmp;
+//}
 //void SelectSort(int *a, int size)
 //{
 //	int start = 0;
