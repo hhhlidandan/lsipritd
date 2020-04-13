@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1269,680">
+    <VerticalLayout width="1269" height="680" bkimage="skin\018d4c597e9063a8012156037896f3.jpg@1280w_1l_2o_100sh.png" bkcolor="#12639424">
+        <HorizontalLayout width="1268" height="45" bkcolor="#FFC0C0C0">
+            <Button name="btn_min" float="true" pos="1157,9,0,0" width="48" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;skin\ListRes\max_min.png&apos; source=&apos;0,0,28,17&apos;" />
+            <Button name="btn_close" float="true" pos="1220,9,0,0" width="48" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\frame_btn_close_disable.bmp" />
+        </HorizontalLayout>
+        <HorizontalLayout width="1270" height="61" bkcolor="#FFFFA0A0">
+            <Combo name="combo_select" float="true" pos="34,16,0,0" width="109" height="35" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="skin\GameRes\Combo_over.bmp" pushedimage="skin\GameRes\Combo_over.bmp" dropboxsize="0,150">
+                <ListLabelElement />
+                <ListLabelElement />
+            </Combo>
+            <Edit name="edit_path" float="true" pos="233,14,0,0" width="409" height="38" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" password="true" nativebkcolor="#FFA6CAF0" />
+            <Button name="btn_load" text="加载" float="true" pos="711,20,0,0" width="75" height="31" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\headerctrl_hot.bmp" hotimage="skin\GameRes\headerctrl_down.bmp" pushedimage="skin\GameRes\headerctrl_normal.bmp" />
+        </HorizontalLayout>
+        <HorizontalLayout width="1272" height="56" bkcolor="#FFC0DCC0">
+            <Edit float="true" pos="74,11,0,0" width="134" height="34" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Edit float="true" pos="322,11,0,0" width="134" height="34" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_cut" text="截取" float="true" pos="504,15,0,0" width="64" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\tab_hot.bmp" hotimage="skin\GameRes\headerctrl_normal.bmp" pushedimage="skin\GameRes\tab_normal.bmp" />
+            <Label text="start:" float="true" pos="18,14,0,0" width="50" height="31" bkcolor="#FF808080" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text=" end:" float="true" pos="232,12,0,0" width="46" height="31" bkcolor="#FFA0A0A4" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button text="提取SRT" float="true" pos="625,15,0,0" width="64" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\tab_hot.bmp" hotimage="skin\GameRes\headerctrl_normal.bmp" pushedimage="skin\GameRes\tab_normal.bmp" />
+            <Button text="写入SRT" float="true" pos="754,15,0,0" width="64" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\tab_hot.bmp" hotimage="skin\GameRes\headerctrl_normal.bmp" pushedimage="skin\GameRes\tab_normal.bmp" />
+            <Button name="btn_view" text="提取视频" float="true" pos="870,15,0,0" width="64" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\tab_hot.bmp" hotimage="skin\GameRes\headerctrl_normal.bmp" pushedimage="skin\GameRes\tab_normal.bmp" />
+            <Button text="烧录" float="true" pos="993,15,0,0" width="64" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\tab_hot.bmp" hotimage="skin\GameRes\headerctrl_normal.bmp" pushedimage="skin\GameRes\tab_normal.bmp" />
+            <Button name="btn_generate" text="生成Gif" float="true" pos="1097,15,0,0" width="64" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="skin\GameRes\tab_hot.bmp" hotimage="skin\GameRes\headerctrl_normal.bmp" pushedimage="skin\GameRes\tab_normal.bmp" />
+        </HorizontalLayout>
+        <VerticalLayout width="583" height="502">
+            <List width="581" height="507" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="List/list_header_bg.png">
+                <ListHeader name="domain" bkimage="List/list_header_bg.png">
+                    <ListHeaderItem text="时间" width="234" height="29" bkimage="skin\ListRes\list_header_hot.png" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" hotimage="skin/ListRes/list_header_hot.png" pushedimage="skin/ListRes/list_header_pushed.png" sepimage="skin/ListRes/list_header_sep.png" />
+                    <ListHeaderItem text="文本" width="349" height="31" bkimage="skin\ListRes\list_header_hot.png" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" hotimage="skin/ListRes/list_header_hot.png" pushedimage="skin/ListRes/list_header_pushed.png" sepimage="skin/ListRes/list_header_sep.png" />
+                </ListHeader>
+            </List>
+        </VerticalLayout>
+        <VerticalLayout float="true" pos="608,163,0,0" width="659" height="514" bkcolor="#FFC0DCC0">
+            <Edit float="true" pos="58,13,0,0" width="557" height="442" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_commit" text="&lt;&lt;" float="true" pos="283,455,0,0" width="107" height="46" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>
