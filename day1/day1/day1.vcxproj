@@ -64,7 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="倒置字符串.cpp" />
     <ClCompile Include="删除公共子串.cpp" />
+    <ClCompile Include="排序子序列.cpp" />
     <ClCompile Include="组队竞赛.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
