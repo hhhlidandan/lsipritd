@@ -64,8 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="day4计算糖果.cpp" />
     <ClCompile Include="出现次数超过一半的数.cpp" />
-    <ClCompile Include="计算糖果.cpp" />
+    <ClCompile Include="进制转换.cpp" />
     <ClCompile Include="连续最长数字串.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
