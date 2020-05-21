@@ -72,7 +72,6 @@ int main()
 	system("pause");
 	return 0;
 }
-
 //函数指针数组
 int main()
 {
