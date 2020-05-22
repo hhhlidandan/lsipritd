@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "牛客--剑指--变态跳台阶", "牛客--剑指--变态跳台阶\牛客--剑指--变态跳台阶.vcxproj", "{E2FC4A40-DD99-46AE-95AB-951F0B34CF14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2FC4A40-DD99-46AE-95AB-951F0B34CF14}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E2FC4A40-DD99-46AE-95AB-951F0B34CF14}.Debug|Win32.Build.0 = Debug|Win32
+		{E2FC4A40-DD99-46AE-95AB-951F0B34CF14}.Release|Win32.ActiveCfg = Release|Win32
+		{E2FC4A40-DD99-46AE-95AB-951F0B34CF14}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
